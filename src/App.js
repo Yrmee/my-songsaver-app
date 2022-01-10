@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { SongProvider } from './SongContext';
+import Header from './Components/AppComponents/Header';
+import Footer from './Components/AppComponents/Footer';
+import SongList from './Components/SongComponents/SongList';
+import SongForm from './Components/SongComponents/SongForm';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SongProvider>
+          <Header />
+          <SongForm />
+          <SongList />
+          <Footer />
+      </SongProvider>
     </div>
   );
 }
