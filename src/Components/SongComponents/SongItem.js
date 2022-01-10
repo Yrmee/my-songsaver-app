@@ -7,7 +7,7 @@ const SongItem = ({id, title, artist, genre, rating, deleteSong}) => {
 
 
     return(
-        <tr className="songItem" key={id} id={id}>
+        <tr className="songItem" key={id} id={id} >
             
             <td> {title || " "} </td>
             <td> {artist || " "} </td>
