@@ -9,36 +9,24 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 const SongList = () => {
 
+    const [title, setTitle] = useState("");
     const [genre, setGenre] = useState("");
     const [songs, setSongs] = useContext(SongContext);
 
+    // Sort Title Alphabetic
 
-    /* / Filter by Genre
-    const handlefilterByGenre = (e) => {
-        //e.preventDefault();
-        setGenre( (prevSongs) => {
-            let currentGenre = e.target.value;
-            const newGenre = [...prevSongs.genre];
-
-            const filteredSongs = newGenre.filter(
-                (song) => song.genre === currentGenre
-            );
-            const updateGenreState = {filteredSongs}
-
-            return updateGenreState;
-        })
-    } */
 
     
-     //Deze functie werkt wel, maar slechts 1x.
+    
+    // Filter By Genre
+    const handlefilterByGenre = (e) => {
 
-        const handlefilterByGenre = (e) => {
-        //e.preventDefault();
-        
         let currentGenre = e.target.value;
             
-        const updateGenreState = songs.filter((song) => 
-            song.genre.toLowerCase().includes(currentGenre.toLowerCase()));
+        const updateGenreState = songs.map((song) => {
+            song.hidden = ! song.genre.toLowerCase().includes(currentGenre.toLowerCase())
+            return song;
+        });
         
         setSongs(updateGenreState)
     }
@@ -46,11 +34,13 @@ const SongList = () => {
 
     // Filter by Rating
     const handlefilterByRating = (e) => {
-        //e.preventDefault();
+    
         let currentRating = e.target.value;
 
-        const updateRatingState = songs.filter((song) => 
-            song.rating.includes(currentRating));
+        const updateRatingState = songs.map((song) => {
+            song.hidden = ! song.rating.toLowerCase().includes(currentRating.toLowerCase())
+            return song;
+        });
         
         setSongs(updateRatingState)
     }
@@ -67,7 +57,7 @@ const SongList = () => {
         setSongs([]);
     }
 
-    const ListOfSongs = songs.map(song => (
+    const ListOfSongs = songs.filter(song => !song.hidden).map(song => (
         <SongItem
             key={song.id}
             id={song.id}
