@@ -13,7 +13,7 @@ const SongList = () => {
     const [songs, setSongs] = useContext(SongContext);
 
 
-    // Filter by Genre
+    /* / Filter by Genre
     const handlefilterByGenre = (e) => {
         //e.preventDefault();
         setGenre( (prevSongs) => {
@@ -27,22 +27,22 @@ const SongList = () => {
 
             return updateGenreState;
         })
-    }
+    } */
 
-    /*
-     >> Deze functie werkt wel, maar slechts 1x.
+    
+     //Deze functie werkt wel, maar slechts 1x.
 
         const handlefilterByGenre = (e) => {
-        e.preventDefault();
+        //e.preventDefault();
         
         let currentGenre = e.target.value;
-
+            
         const updateGenreState = songs.filter((song) => 
-            song.genre.includes(currentGenre));
+            song.genre.toLowerCase().includes(currentGenre.toLowerCase()));
         
         setSongs(updateGenreState)
     }
-    */
+    
 
     // Filter by Rating
     const handlefilterByRating = (e) => {
@@ -112,7 +112,7 @@ const SongList = () => {
 
                         <th className="song-row__item">Genre
                             <select className="inputForm" 
-                                onChange={() => handlefilterByGenre(genre)}
+                                onChange={handlefilterByGenre}
                             >
                                 <option value="">-- Filter by Genre --</option>
                                 <option value="Pop"> Pop </option>
