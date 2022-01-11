@@ -1,22 +1,19 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 
 import SongItem from './SongItem';
 import {SongContext} from '../../SongContext';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { faTrashAlt, faCaretSquareUp, faCaretSquareDown  } from '@fortawesome/free-solid-svg-icons';
 
 
 const SongList = () => {
 
-    const [title, setTitle] = useState("");
-    const [genre, setGenre] = useState("");
+   
     const [songs, setSongs] = useContext(SongContext);
 
     // Sort Title Alphabetic
-
-
-    
+  
     
     // Filter By Genre
     const handlefilterByGenre = (e) => {
@@ -79,32 +76,23 @@ const SongList = () => {
 
                 <thead className="playlist-song--header">  
                     <tr>
-                        <th className="song-row__item">Title
-                            <select className="inputForm"    
-                            >
-                                <option value="">-- Sort Title --</option>
-                                <option value= "A-Z"> A-Z </option>
-                                <option value= "Z-A"> Z-A </option>
-                                <option value= "0-9"> 0-9 </option>
-                                <option value= "9-0"> 9-0 </option>
-                            </select>
+                        <th className="song-row__title">Title
+                            <br></br>
+                            <button className="btn-title"><FontAwesomeIcon icon={faCaretSquareUp} /></button>
+                            <button className="btn-title"><FontAwesomeIcon icon={faCaretSquareDown} /></button>
                         </th>
 
                         <th className="song-row__item">Artist 
-                            <select className="inputForm" >
-                                <option value="">-- Sort Artist --</option>
-                                <option value= "A-Z"> A-Z </option>
-                                <option value= "Z-A"> Z-A </option>
-                                <option value= "0-9"> 0-9 </option>
-                                <option value= "9-0"> 9-0 </option>
-                            </select>
+                            <br></br>
+                            <button className="btn-title"><FontAwesomeIcon icon={faCaretSquareUp} /></button>
+                            <button className="btn-title"><FontAwesomeIcon icon={faCaretSquareDown} /></button>
                         </th>
 
                         <th className="song-row__item">Genre
                             <select className="inputForm" 
                                 onChange={handlefilterByGenre}
                             >
-                                <option value="">-- Filter by Genre --</option>
+                                <option value="">--</option>
                                 <option value="Pop"> Pop </option>
                                 <option value="Trance"> Trance </option>
                                 <option value="Hardstyle"> Hardstyle </option>
@@ -118,10 +106,10 @@ const SongList = () => {
                         </th>
 
                         <th className="song-row__item">Rating
-                            <select className="inputForm"
+                            <select className="inputForm-rating"
                                 onChange={handlefilterByRating}
                             >
-                                <option value="">-- Filter by Rating --</option>
+                                <option value="">--</option>
                                 <option value= "1"> 1 </option>
                                 <option value= "2"> 2 </option>
                                 <option value= "3"> 3 </option>
