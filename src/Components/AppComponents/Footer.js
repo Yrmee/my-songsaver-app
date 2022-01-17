@@ -4,9 +4,9 @@ const Footer = () => {
 
  return (
     <div>
-        <h1>
-            Footer
-        </h1>
+        <h3>
+            Eindopdracht React - Yrja Eggermond
+        </h3>
     </div>
  )
 }

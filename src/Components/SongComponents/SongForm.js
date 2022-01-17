@@ -74,7 +74,7 @@ const SongForm = () => {
             name = "genre"
             onChange = {updateGenre}
             >
-            <option value= "choose"> -- Choose genre -- </option>
+            <option value= "choose"> Choose genre  </option>
             <option value= "Pop"> Pop </option>
             <option value= "Trance"> Trance </option>
             <option value= "Hardstyle"> Hardstyle </option>
@@ -82,7 +82,6 @@ const SongForm = () => {
             <option value= "Eurodance"> Eurodance </option>
             <option value= "Rock"> Rock </option>
             <option value= "House"> House </option>
-            <option value= "Nederlandstalig"> Nederlandstalig </option>
             <option value= "Other"> Other </option>
         </select>
         

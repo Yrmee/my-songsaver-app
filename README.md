@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+Assignment: Songsaver
+Today you are going to work on creating a Single Page Application (SPA) in which you can save all your favorite songs with a rating.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Requirements
+In order to meet the requirements of the (imaginary) employer, we expect your SPA to meet the following core functionalities:
 
-## Available Scripts
+- As a user, I want to enter the following information about my song: title, artist, genre, rating (dropdown menu is not required).
+- As a user, I want to be able to click on one button so that my entered song is added to my playlist.
+- As a user, I want to be able to see my songs in an overview (my playlist), in which all entered data are visible.
 
-In the project directory, you can run:
+Other conditions
+- You are completely free to build your components yourself: Stateful and/or Smart versus Dumb, or with Class components, or Functional Components (with the UseState Hook)....
 
-### `npm start`
+.....But, beware that you don't get spaghetti code, in which each component does everything (managing State, managing functions, and UI display, etc.)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Passed = Core Functionalities + 3 points (!)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+In addition to these Core Functionalities above, you are required to choose 3 additional points from the list below.
 
-### `npm test`
+Additional points:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 1 POINT – Sort the songs by name (a-z or z-a) or artist (a-z or z-a), sort by stars (5-1 or 1-5)
 
-### `npm run build`
+- 1 POINT – Delete button: delete songs from the state
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 1 POINT – Categorize: each genre gets its own list and the song you add ends up with the respective genre
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 2 POINTS – Filter songs by:
+-- genre (select which genres you want) in the UI you see either a dropdown with which you can select 1 genre, or you create a checkbox per genre, if that checkbox is checked: show the genre (so this can also be several or none be one)
+-- stars (sort which results with x stars you want to see) in the UI you see either a dropdown with which you can select 1 rating, or you create a checkbox per rating, if that checkbox is checked: show all songs of that rating (this so there can be several or none)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 2 POINTS
+-- Routing (/Navigation): add a navbar or menu with a link and page "About us ", containing a short story about yourself and this project (max 10 sentences)
 
-### `npm run eject`
+- 2 POINTS – REDUX
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+design
+This week the focus is 100% on React. Within React, all the "logic" and functionality comes from using JavaScript with real-world examples. CSS should be the last thing you work with.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+GitHub
+We would very much like to see you get the Core Functionalities working on the final Master Branch.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+From this base, you can build any additional point you choose from the list above from (and on) a separate feature industry (eg sorting).
+- This has the advantage that, if you get stuck on a certain feature, you can stop this work for a while to continue with another feature.
+- Later you can always come back to a feature by switching to that branch
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+But..... we don't send you out without navigation. As a "compass" we give you a piece of basic code that you have to point in the right direction to complete this assignment.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+(If you decide to use Redux, you will need to modify the base code below slightly)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+------------------------------------------------------------------------
+class SongOverview extends Component {
 
-### Code Splitting
+  constructor() {
+    super()
+    this.state = 
+    {
+      songs: []
+    }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  }
 
-### Analyzing the Bundle Size
+  addSong = (song) => {
+                        // do something to change the state
+  }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  render() {
+    return (
+      <div>
+              <SongForm addSong={this.addSong}/>
+                                        <table style={{width: "100%"}}>
+                        <tr className="song-header">  
+                                <th className="song-row__item">Song</th>
+                                <th className="song-row__item">Artist</th>
+                                <th className="song-row__item">Genre</th>
+                                <th className="song-row__item">Rating</th>
+                              </tr>
+                                </table>
+              <SongList songs={this.state.songs}/>
+      </div>
+    );
+  }
+}
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+export default SongOverview;
