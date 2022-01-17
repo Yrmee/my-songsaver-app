@@ -21,26 +21,6 @@ body {
         inset 6px 6px 12px rgba(255, 255, 255, 0.4);
 }
 
-.playlist {
-    margin-bottom: 50px;
-}
-
-.playlist-table {
-    width: 100%;
-    background-color: #ac939311;
-}
-
-.song-row__item {
-    background-color: #ac939311;
-    padding: 10px;
-}
-
-.song-row__title {
-    background-color: #ac939311;
-    padding: 10px;
-    
-}
-
 h1 {
     color: rgb(167, 167, 167);
     font-size: 50px;
@@ -61,13 +41,21 @@ h3 {
     margin-bottom: 50px;
 }
 
-.playlist-song--header {
+.playlist {
+    margin-bottom: 50px;
+}
+
+.playlist-table {
+    border-collapse: collapse;
+}
+
+.song-row__item {
     color: #99c8df;
-    font-size: 28px;
+    font-size: 22px;
     text-shadow: 
         2px 2px 4px rgba(0, 0, 0, 0.8), 
         -2px -2px 4px rgba(255, 255, 255, 0.4);
-    text-align: left;
+    text-align: justify;
 }
 
 .songItem {
@@ -85,6 +73,7 @@ h3 {
     color: rgba(218, 218, 218, 0.89);
     font-size: 18px;
     text-align: left;
+    margin-bottom: 60px;
 }
 
 .inputForm {
@@ -94,21 +83,28 @@ h3 {
     text-align: left;
     padding: 5px;
     margin-left: 20px;
-    margin-bottom: 20px;
 }
 
-.inputForm-rating {
+.inputFilterRating {
+    display: flex;
     border-radius: 6px;
     color: rgba(0, 0, 0, 0.89);
-    font-size: 16px;
-    text-align: left;
-    padding: 5px;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: center;
+    padding: 2px;
+}
+
+.inputFilterGenre {
+    display: flex;
+    border-radius: 6px;
+    color: rgba(0, 0, 0, 0.89);
+    font-size: 14px;
+    text-align: center;
+    padding: 2px;
 }
 
 
-.btn-title {
+.btn-sort {
     margin: 0 5px;
     padding: 2px;
     border-radius: 4px;

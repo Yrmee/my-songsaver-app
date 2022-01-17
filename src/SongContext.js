@@ -17,8 +17,6 @@ export const SongProvider = (props) => {
             {id: 10, title: "Right Here, Right Now", artist: "Fatboy Slim", genre: "House", rating:"4"}
     ]);
 
-   
-
     return(
         <SongContext.Provider value={[songs, setSongs]}>
             {props.children}

@@ -32,7 +32,12 @@ const SongForm = () => {
         e.preventDefault();
 
         if (title === "") {
-            alert('field empty');
+            alert('Title field empty');
+            return;
+        }
+
+        if (artist === "") {
+            alert('Artist field empty');
             return;
         }
 
@@ -45,6 +50,9 @@ const SongForm = () => {
             }]);
 
         setTitle("");
+        setArtist("");
+        setGenre("");
+        setRating("");
     }
 
     return (
