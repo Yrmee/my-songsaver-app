@@ -1,4 +1,5 @@
 Assignment: Songsaver
+
 Today you are going to work on creating a Single Page Application (SPA) in which you can save all your favorite songs with a rating.
 
 Requirements
@@ -35,9 +36,11 @@ Additional points:
 - 2 POINTS – REDUX
 
 design
+
 This week the focus is 100% on React. Within React, all the "logic" and functionality comes from using JavaScript with real-world examples. CSS should be the last thing you work with.
 
 GitHub
+
 We would very much like to see you get the Core Functionalities working on the final Master Branch.
 
 From this base, you can build any additional point you choose from the list above from (and on) a separate feature industry (eg sorting).
