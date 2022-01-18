@@ -41,6 +41,16 @@ const SongForm = () => {
             return;
         }
 
+        if (genre === "") {
+            alert('Choose genre');
+            return;
+        }
+
+        if (rating === "") {
+            alert('Choose rating');
+            return;
+        }
+
         setSongs(prevSongs => [...prevSongs, {
                 id: prevSongs[prevSongs.length -1].id + 1,
                 title: title,
