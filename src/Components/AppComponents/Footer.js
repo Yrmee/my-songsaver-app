@@ -5,7 +5,7 @@ const Footer = () => {
  return (
     <div>
         <h3>
-            Eindopdracht React - Yrja Eggermond
+            Assignement for React - Yrja Eggermond 
         </h3>
     </div>
  )

@@ -10,7 +10,6 @@ const SongList = () => {
    
     const [songs, setSongs] = useContext(SongContext);
     
-
     // Sort Title and Artist Alphabetic
     const [order, setOrder] = useState("ASC");
 
@@ -94,10 +93,10 @@ const SongList = () => {
 
                 <thead className="playlist-song--header">  
                     <tr>
-                    <th className="song-row__item">
-                        <button className="btn-sort" onClick={() => sorting("title")}>
-                            <FontAwesomeIcon icon={faSort} />
-                        </button> Title 
+                        <th className="song-row__item">
+                            <button className="btn-sort" onClick={() => sorting("title")}>
+                                <FontAwesomeIcon icon={faSort} />
+                            </button> Title 
                         </th>
 
                         <th className="song-row__item">
@@ -108,7 +107,7 @@ const SongList = () => {
 
                         <th className="song-row__item">Genre 
                             <select className="inputFilterGenre" onChange={handlefilterByGenre}> 
-                                <option value="">--</option>
+                                <option value="">Filter By Genre</option>
                                 <option value="Pop"> Pop </option>
                                 <option value="Trance"> Trance </option>
                                 <option value="Hardstyle"> Hardstyle </option>
@@ -122,7 +121,7 @@ const SongList = () => {
 
                         <th className="song-row__item"> Rating 
                             <select className="inputFilterRating" onChange={handlefilterByRating}>
-                                <option value="">--</option>
+                                <option value="">Filter By Rating</option>
                                 <option value= "1"> 1 </option>
                                 <option value= "2"> 2 </option>
                                 <option value= "3"> 3 </option>

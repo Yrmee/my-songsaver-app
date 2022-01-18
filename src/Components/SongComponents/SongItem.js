@@ -13,7 +13,7 @@ const SongItem = ({id, title, artist, genre, rating, deleteSong}) => {
             <td> {artist || " "} </td>
             <td> {genre || " "}  </td>
             <td> {rating || " "}  </td>
-
+            
             <td> <button className="btn-remove-song" onClick={() => deleteSong(id)}> <FontAwesomeIcon icon={faTrashAlt} /> </button> </td>
         </tr>
     );

@@ -79,7 +79,7 @@ h3 {
 .inputForm {
     border-radius: 6px;
     color: rgba(0, 0, 0, 0.89);
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
     padding: 5px;
     margin-left: 20px;
@@ -89,7 +89,7 @@ h3 {
     display: flex;
     border-radius: 6px;
     color: rgba(0, 0, 0, 0.89);
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
     padding: 2px;
 }
@@ -98,7 +98,7 @@ h3 {
     display: flex;
     border-radius: 6px;
     color: rgba(0, 0, 0, 0.89);
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
     padding: 2px;
 }
