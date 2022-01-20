@@ -25,8 +25,17 @@ export const SongProvider = props => {
       genre: 'Eurodance',
       rating: '3'
     },
-    { id: 4, title: 'Larger Than Life', artist: 'Backstreet Boys', genre: 'Pop', rating: '4' },
-    { id: 5, title: 'So High', artist: 'Noisecontrollers', genre: 'Hardstyle', rating: '5' },
+    { 
+      id: 4, 
+      title: 'Larger Than Life', 
+      artist: 'Backstreet Boys', genre: 'Pop', 
+      rating: '4' },
+    { 
+      id: 5, 
+      title: 'So High', 
+      artist: 'Noisecontrollers', 
+      genre: 'Hardstyle', 
+      rating: '5' },
     {
       id: 6,
       title: 'Beat As One',
@@ -41,9 +50,24 @@ export const SongProvider = props => {
       genre: 'Hardcore',
       rating: '5'
     },
-    { id: 8, title: 'Gimme more', artist: 'Britney Spears', genre: 'Pop', rating: '5' },
-    { id: 9, title: 'Jump For Joy', artist: '2 Unlimited', genre: 'Eurodance', rating: '5' },
-    { id: 10, title: 'Right Here, Right Now', artist: 'Fatboy Slim', genre: 'House', rating: '4' }
+    { 
+      id: 8, 
+      title: 'Gimme more', 
+      artist: 'Britney Spears', 
+      genre: 'Pop', 
+      rating: '5' },
+    { 
+      id: 9, 
+      title: 'Jump For Joy', 
+      artist: '2 Unlimited', 
+      genre: 'Eurodance', 
+      rating: '5' },
+    { 
+      id: 10, 
+      title: 'Right Here, Right Now', 
+      artist: 'Fatboy Slim', 
+      genre: 'House', 
+      rating: '4' }
   ])
 
   return <SongContext.Provider value={[songs, setSongs]}>{props.children}</SongContext.Provider>
