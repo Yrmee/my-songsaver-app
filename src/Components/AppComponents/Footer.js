@@ -1,14 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 const Footer = () => {
-
- return (
+  return (
     <div>
-        <h3>
-            Assignement for React - Yrja Eggermond 
-        </h3>
+      <h3>Assignement for React - Yrja Eggermond</h3>
     </div>
- )
+  )
 }
 
-export default Footer;
+export default Footer

@@ -1,175 +1,159 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    background-color: #DDD;
+  background-color: #ddd;
 }
 
 .App {
-    max-width: 900px;
-    margin: auto;
-    display: block;
-    background-color: #313131;
-    padding: 50px;
-    border-radius: 16px;
-    box-shadow: 
-        inset -6px -6px 12px rgba(0, 0, 0, 0.8), 
-        inset 6px 6px 12px rgba(255, 255, 255, 0.4);
+  max-width: 900px;
+  margin: auto;
+  display: block;
+  background-color: #313131;
+  padding: 50px;
+  border-radius: 16px;
+  box-shadow: inset -6px -6px 12px rgba(0, 0, 0, 0.8), inset 6px 6px 12px rgba(255, 255, 255, 0.4);
 }
 
 h1 {
-    color: rgb(167, 167, 167);
-    font-size: 50px;
-    text-shadow: 
-        2px 2px 4px rgba(0, 0, 0, 0.8), 
-        -2px -2px 4px rgba(255, 255, 255, 0.4);
-    text-align: center;
-    margin-bottom: 10px;
+  color: rgb(167, 167, 167);
+  font-size: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), -2px -2px 4px rgba(255, 255, 255, 0.4);
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 h3 {
-    color: rgb(167, 167, 167);
-    font-size: 20px;
-    text-shadow: 
-        2px 2px 4px rgba(0, 0, 0, 0.8), 
-        -2px -2px 4px rgba(255, 255, 255, 0.4);
-    text-align: center;
-    margin-bottom: 50px;
+  color: rgb(167, 167, 167);
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), -2px -2px 4px rgba(255, 255, 255, 0.4);
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .playlist {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .playlist-table {
-    border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 .song-row__item {
-    color: #99c8df;
-    font-size: 22px;
-    text-shadow: 
-        2px 2px 4px rgba(0, 0, 0, 0.8), 
-        -2px -2px 4px rgba(255, 255, 255, 0.4);
-    text-align: justify;
+  color: #99c8df;
+  font-size: 22px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), -2px -2px 4px rgba(255, 255, 255, 0.4);
+  text-align: justify;
 }
 
 .songItem {
-    background-color: #ac939311;
-    color: #AAA;
-    font-size: 16px;
-    text-shadow: 
-        2px 2px 4px rgba(0, 0, 0, 0.8), 
-        -2px -2px 4px rgba(255, 255, 255, 0.4);
-    text-align: left;
-    margin-bottom: 10px;
+  background-color: #ac939311;
+  color: #aaa;
+  font-size: 16px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), -2px -2px 4px rgba(255, 255, 255, 0.4);
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.no_results {
+  text-align: center;
+  color:rgb(117, 117, 117);
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .songForm {
-    color: rgba(218, 218, 218, 0.89);
-    font-size: 18px;
-    text-align: left;
-    margin-bottom: 60px;
+  color: rgba(218, 218, 218, 0.89);
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 60px;
 }
 
 .inputForm {
-    border-radius: 6px;
-    color: rgba(0, 0, 0, 0.89);
-    font-size: 14px;
-    text-align: left;
-    padding: 5px;
-    margin-left: 20px;
+  border-radius: 6px;
+  color: rgba(0, 0, 0, 0.89);
+  font-size: 14px;
+  text-align: left;
+  padding: 5px;
+  margin-left: 20px;
 }
 
 .inputFilterRating {
-    display: flex;
-    border-radius: 6px;
-    color: rgba(0, 0, 0, 0.89);
-    font-size: 12px;
-    text-align: center;
-    padding: 2px;
+  display: flex;
+  border-radius: 6px;
+  color: rgba(0, 0, 0, 0.89);
+  font-size: 12px;
+  text-align: center;
+  padding: 2px;
 }
 
 .inputFilterGenre {
-    display: flex;
-    border-radius: 6px;
-    color: rgba(0, 0, 0, 0.89);
-    font-size: 12px;
-    text-align: center;
-    padding: 2px;
+  display: flex;
+  border-radius: 6px;
+  color: rgba(0, 0, 0, 0.89);
+  font-size: 12px;
+  text-align: center;
+  padding: 2px;
 }
 
-
 .btn-sort {
-    margin: 0 5px;
-    padding: 2px;
-    border-radius: 4px;
-    box-shadow: 
-        2px 2px 2px rgba(0, 0, 0, 0.8), 
-        -2px -2px 2px rgba(255, 255, 255, 0.4),
-        inset -2px -2px 2px rgba(0, 0, 0, 0.4),
-        inset 2px 2px 2px rgba(255, 255, 255, 0.4);
-    border: none;
-    outline: none;
-    background-color: #83bbd4;
-    color: #FFF;
-    font-size: 20px;
-    cursor: pointer;
+  margin: 0 5px;
+  padding: 2px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8), -2px -2px 2px rgba(255, 255, 255, 0.4),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.4), inset 2px 2px 2px rgba(255, 255, 255, 0.4);
+  border: none;
+  outline: none;
+  background-color: #83bbd4;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .btn-remove-song {
-    display: flex;
-    margin: 0 30px;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 
-        4px 4px 10px rgba(0, 0, 0, 0.8), 
-        -4px -4px 10px rgba(255, 255, 255, 0.4),
-        inset -4px -4px 10px rgba(0, 0, 0, 0.4),
-        inset 4px 4px 10px rgba(255, 255, 255, 0.4);
-    border: none;
-    outline: none;
-    background-color: #83bbd4;
-    color: #FFF;
-    font-size: 14px;
-    cursor: pointer;
+  display: flex;
+  margin: 0 30px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8), -4px -4px 10px rgba(255, 255, 255, 0.4),
+    inset -4px -4px 10px rgba(0, 0, 0, 0.4), inset 4px 4px 10px rgba(255, 255, 255, 0.4);
+  border: none;
+  outline: none;
+  background-color: #83bbd4;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .btn-remove-list {
-    display: flex;
-    margin-top: 30px;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 
-        4px 4px 10px rgba(0, 0, 0, 0.8), 
-        -4px -4px 10px rgba(255, 255, 255, 0.4),
-        inset -4px -4px 10px rgba(0, 0, 0, 0.4),
-        inset 4px 4px 10px rgba(255, 255, 255, 0.4);
-    border: none;
-    outline: none;
-    background-color: #83bbd4;
-    color: #FFF;
-    font-size: 14px;
-    cursor: pointer;
+  display: flex;
+  margin-top: 30px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8), -4px -4px 10px rgba(255, 255, 255, 0.4),
+    inset -4px -4px 10px rgba(0, 0, 0, 0.4), inset 4px 4px 10px rgba(255, 255, 255, 0.4);
+  border: none;
+  outline: none;
+  background-color: #83bbd4;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .btn-add-song {
-    margin-left: 20px;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 
-        4px 4px 10px rgba(0, 0, 0, 0.8), 
-        -4px -4px 10px rgba(255, 255, 255, 0.4),
-        inset -4px -4px 10px rgba(0, 0, 0, 0.4),
-        inset 4px 4px 10px rgba(255, 255, 255, 0.4);
-    border: none;
-    outline: none;
-    background-color: #83bbd4;
-    color: #FFF;
-    font-size: 14px;
-    cursor: pointer;
+  margin-left: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8), -4px -4px 10px rgba(255, 255, 255, 0.4),
+    inset -4px -4px 10px rgba(0, 0, 0, 0.4), inset 4px 4px 10px rgba(255, 255, 255, 0.4);
+  border: none;
+  outline: none;
+  background-color: #83bbd4;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
 }
