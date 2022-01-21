@@ -57,14 +57,14 @@ const SongList = () => {
     setSongs(updateState)
 
     /* 
-    In Terminal this warning shows u:
+    In Terminal this warning shows up:
       Warning: React Hook useEffect has missing dependencies: 'setSongs' and 'songs'. 
       Either include them or remove the dependency array.
 
     - If I include those missing dependencies, it causes an infinity loop immediately in the console.
-    - Without them, this warning shows up.
+    - Without them, this warning shows up in the Terminal. And everything runs/works fine.
 
-    - I added " // eslint-disable-next-line " to the line before to ignore this warning.
+    - I added "// eslint-disable-next-line" to the line before to ignore this warning.
     */
 
    // eslint-disable-next-line
