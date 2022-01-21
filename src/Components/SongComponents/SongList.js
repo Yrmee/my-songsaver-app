@@ -31,8 +31,8 @@ const SongList = () => {
   }
 
   // Function Filter Genre and Rating
-  const [filteredGenre, setFilteredGenre] = useState(null)
-  const [filteredRating, setFilteredRating] = useState(null)
+  const [filteredGenre, setFilteredGenre] = useState('')
+  const [filteredRating, setFilteredRating] = useState('')
   
   useEffect(() => {
     const updateState = songs.map(song => {
