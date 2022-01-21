@@ -9,7 +9,7 @@ const SongForm = () => {
   const [genre, setGenre] = useState('')
   const [rating, setRating] = useState('')
 
-  const [setSongs] = useContext(SongContext)
+  const [ , setSongs] = useContext(SongContext)
 
   const updateTitle = e => {
     setTitle(e.target.value)
