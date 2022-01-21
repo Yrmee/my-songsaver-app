@@ -33,16 +33,6 @@ const SongList = () => {
   // Function Filter Genre and Rating
   const [filteredGenre, setFilteredGenre] = useState(null)
   const [filteredRating, setFilteredRating] = useState(null)
-
-  // Filter By Genre
-  const handlefilterByGenre = e => {
-    setFilteredGenre(e.target.value)
-  }
-  
-  // Filter by Rating
-  const handlefilterByRating = e => {
-    setFilteredRating(e.target.value)
-  }
   
   useEffect(() => {
     const updateState = songs.map(song => {
@@ -69,6 +59,16 @@ const SongList = () => {
 
    // eslint-disable-next-line
   }, [filteredGenre, filteredRating])
+
+  // Filter By Genre
+  const handlefilterByGenre = e => {
+    setFilteredGenre(e.target.value)
+  }
+    
+  // Filter by Rating
+  const handlefilterByRating = e => {
+    setFilteredRating(e.target.value)
+  }
 
   // Delete Single Song from Playlist
   const deleteSong = songId => {
