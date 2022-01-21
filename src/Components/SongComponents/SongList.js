@@ -33,7 +33,7 @@ const SongList = () => {
   // Function Filter Genre and Rating
   const [filteredGenre, setFilteredGenre] = useState(null)
   const [filteredRating, setFilteredRating] = useState(null)
-
+  
   useEffect(() => {
     const updateState = songs.map(song => {
         const filterRating = filteredRating ? song.rating.includes(filteredRating) : true
@@ -44,9 +44,15 @@ const SongList = () => {
         song.hidden = !(filterGenre && filterRating)
         return song
       })
+    setSongs(updateState)
+    /* 
+    Warning: React Hook useEffect has missing dependencies: 
+    'setSongs' and 'songs'. Either include them or remove the dependency array.
+    - If I include them, it causes an infinity loop immediately in the console.
+    - Without them, this warning shows up.
+    */
+  }, [filteredGenre, filteredRating])
   
-      setSongs(updateState)
-  }, [filteredGenre, filteredRating, setSongs, songs])
 
   // Filter By Genre
   const handlefilterByGenre = e => {
